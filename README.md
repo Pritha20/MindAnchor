@@ -1,129 +1,121 @@
 # MindAnchor
 
 <p align="center">
-  <img src="assets/logo.png" width="120"/>
+  <img src="assets/logo.png" width="120" alt="MindAnchor Logo"/>
 </p>
 
-<h2 align="center">
-Production-Grade AI Voice Companion for Emotional Wellness
-</h2>
+<h2 align="center">Production-Grade AI Voice Companion for Emotional Wellness</h2>
 
 <p align="center">
-Natural, low-latency voice conversations powered by LiveKit, Deepgram, Gemini and ElevenLabs.
+Natural, low-latency voice conversations powered by LiveKit, Deepgram, Gemini, and ElevenLabs.
 </p>
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Production-success)
-![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
-![Deepgram](https://img.shields.io/badge/Deepgram-Nova-blueviolet)
-![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS-black)
-![License](https://img.shields.io/badge/License-MIT-green)
-
+  <img src="https://img.shields.io/badge/Python-3.11-blue" />
+  <img src="https://img.shields.io/badge/FastAPI-Production-success" />
+  <img src="https://img.shields.io/badge/Google-Gemini-orange" />
+  <img src="https://img.shields.io/badge/Deepgram-Nova-blueviolet" />
+  <img src="https://img.shields.io/badge/ElevenLabs-TTS-black" />
+  <img src="https://img.shields.io/badge/License-MIT-green" />
 </p>
 
 ---
 
-# The Problem
+## The Problem
 
 We live in a world where staying connected has never been easier, yet meaningful conversations have become increasingly rare. Busy schedules, demanding careers, geographical distance, and the constant pace of modern life often leave people with little opportunity to pause and simply talk.
 
 Moments of stress, anxiety, self-doubt, or emotional exhaustion rarely arrive at convenient times. They often occur late at night, after a difficult meeting, during periods of loneliness, or when friends, family, or professional support may not be immediately available.
 
-While AI has made remarkable progress in assisting us with productivity, coding, education, and everyday tasks, its potential to provide compassionate, accessible conversational support remains largely untapped.
+While AI has transformed productivity, education, and software engineering, its potential to provide compassionate, accessible conversational support remains largely untapped.
 
-MindAnchor was born from a simple idea:
+MindAnchor was born from one simple question:
 
-**What if AI could become a calm, empathetic companion that listens first, responds naturally, and helps people navigate difficult moments through meaningful conversation?**
+> **What if AI could become a calm, empathetic companion that listens first, responds naturally, and helps people navigate difficult moments through meaningful conversation?**
 
 ---
 
-# Overview
+## Overview
 
 MindAnchor is a production-grade AI voice companion that enables natural, real-time spoken conversations for emotional wellness and guided mindfulness.
 
-Rather than interacting through text, users can simply speak with MindAnchor as they would with another person. The system combines real-time speech recognition, large language models, neural speech synthesis, and low-latency communication to create fluid, human-like voice interactions.
+Instead of interacting through text, users simply speak naturally while MindAnchor listens, understands context, and responds with empathetic, human-like voice interactions.
 
-MindAnchor can:
+The project combines modern speech recognition, large language models, neural speech synthesis, and low-latency voice streaming into a seamless conversational AI pipeline.
 
-- Listen actively and respond empathetically
-- Guide breathing and mindfulness exercises
-- Encourage emotional reflection
-- Offer supportive conversations during stressful moments
-- Demonstrate a modern production-ready conversational AI architecture
+**MindAnchor is not intended to replace licensed mental health professionals or genuine human relationships. It is designed as an accessible conversational companion that provides supportive dialogue whenever immediate human interaction may not be available.**
 
-MindAnchor is **not** intended to replace licensed mental health professionals or genuine human relationships. Instead, it serves as an accessible conversational companion that can provide supportive dialogue whenever immediate human interaction may not be available.
+---
 
-# Demo
+## Key Features
+
+- Real-time voice conversations
+- Ultra-low latency speech streaming
+- Human-like AI voice responses
+- Natural speech recognition
+- Guided mindfulness exercises
+- Emotionally supportive conversations
+- JWT authentication
+- Production-grade architecture
+- Modular FastAPI backend
+
+---
+
+## System Architecture
 
 <p align="center">
-<a href="assets/demo.gif">
-<img src="assets/demo.gif" width="900">
+<img src="assets/architecture.png" width="100%" alt="System Architecture"/>
+</p>
+
+---
+
+## Demo
+
+<p align="center">
+<a href="assets/demo.mp4">
+<img src="assets/demo.gif" width="900" alt="MindAnchor Demo"/>
 </a>
 </p>
 
 <p align="center">
-<b>Click the GIF above to watch the complete demo video.</b>
-</p>
-
-
-
-# Key Features
-
-- Real-time voice conversations
-- Ultra-low latency audio streaming
-- Human-like AI speech synthesis
-- Natural speech recognition
-- Guided mindfulness conversations
-- Emotionally supportive dialogue
-- JWT-based authentication
-- Production-ready architecture
-- Modular backend using FastAPI
-
----
-
-# System Architecture
-
-<p align="center">
-<img src="assets/architecture.png" width="100%">
+<b>Click the GIF above to watch the complete demo.</b>
 </p>
 
 ---
 
-# Voice Pipeline
+## Voice Pipeline
 
-```
-User Speaks
+```text
+🎤 User Speaks
       │
       ▼
- LiveKit
+LiveKit
       │
       ▼
- Deepgram STT
+Deepgram Speech-to-Text
       │
       ▼
- Gemini LLM
+Google Gemini
       │
       ▼
- ElevenLabs TTS
+ElevenLabs Text-to-Speech
       │
       ▼
- LiveKit Streams Audio
+LiveKit
       │
       ▼
- User Hears Response
+🔊 AI Voice Response
 ```
 
 ---
 
-# Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |-----------|--------------|
 | Backend | FastAPI |
 | Frontend | HTML5, CSS3, Vanilla JavaScript |
-| Programming Language | Python, JavaScript |
+| Programming Languages | Python, JavaScript |
 | Real-Time Communication | LiveKit, WebRTC |
 | Speech-to-Text | Deepgram Nova |
 | Large Language Model | Google Gemini |
@@ -134,29 +126,29 @@ User Speaks
 
 ---
 
-# Quick Start
+## Quick Start
 
-## Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/<your-username>/MindAnchor.git
 cd MindAnchor
 ```
 
-## Create Environment
+### Create Environment
 
 ```bash
 conda create -n voice python=3.11
 conda activate voice
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Configure Environment
+### Configure Environment Variables
 
 Create a `.env` file.
 
@@ -169,40 +161,42 @@ ELEVENLABS_API_KEY=
 GEMINI_API_KEY=
 ```
 
-## Start Services
+### Run the AI Worker
 
 ```bash
 python app.py dev
 ```
 
-Open another terminal
+### Run the Token Server
 
 ```bash
 uvicorn token_server:app --reload
 ```
 
-Launch
+### Launch the Frontend
 
-```
+Open:
+
+```text
 frontend/index.html
 ```
 
-Click the microphone and begin speaking.
+Grant microphone access and begin speaking naturally with MindAnchor.
 
 ---
 
-# Future Improvements
+## Future Improvements
 
-- Conversation memory
+- Persistent conversation memory
 - Personalized wellness profiles
 - Emotion detection from voice
 - Daily mindfulness sessions
 - Multi-language support
 - Voice cloning
-- Session analytics
+- Conversation analytics dashboard
 
 ---
 
-# License
+## License
 
-Licensed under the MIT License.
+This project is licensed under the **MIT License**.
