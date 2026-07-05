@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MindAnchor</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background"></div>
+
+    <!-- Settings -->
+    <header>
+
+        <button class="icon-button">
+
+            <i class="fa-solid fa-gear"></i>
+
+        </button>
+
+    </header>
+
+    <!-- Main UI -->
+    <main>
+
+        <!-- AI Orb -->
+        <div id="orb" class="orb state-idle">
+
+            <div class="orb-core"></div>
+
+        </div>
+
+        <!-- Assistant Status -->
+        <p id="status" class="status">
+
+            Idle
+
+        </p>
+
+        <!-- Subtitle -->
+        <div id="subtitle" class="subtitle">
+
+            Take a deep breath.
+            I'm listening whenever you're ready.
+
+        </div>
+
+        <!-- Mic Button -->
+        <button id="micButton" class="mic-button">
+
+            <i class="fa-solid fa-microphone"></i>
+
+        </button>
+
+    </main>
+
+    <!-- LiveKit JavaScript SDK -->
+    <script src="https://unpkg.com/livekit-client/dist/livekit-client.umd.js"></script>
+
+    <!-- Your Application -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
