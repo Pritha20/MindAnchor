@@ -1,242 +1,146 @@
-# 🧠 MindAnchor
-### AI-Powered Real-Time Voice Wellness Companion
+# MindAnchor
+
+## The Problem Statement
+
+We live in a world that has never been more connected, yet genuine human connection has become increasingly scarce. The pace of modern life, demanding careers, geographical separation, and the overwhelming presence of digital communication have contributed to a growing sense of loneliness and emotional isolation. While technology has enabled us to communicate instantly, meaningful conversations—those where we feel truly heard, understood, and supported—have become increasingly difficult to find.
+
+For many individuals, moments of stress, anxiety, uncertainty, or emotional vulnerability often occur when family, friends, or professional support are unavailable. Although mental health awareness has grown significantly, access to immediate emotional support remains limited by time, geography, affordability, and availability. As a result, countless people navigate difficult moments alone, without even a simple conversation to help them process their thoughts.
+
+MindAnchor was inspired by this gap. It is built on the belief that compassionate technology can play a supportive role in improving accessibility to conversational wellness experiences, particularly during moments when immediate human support may not be available.
+
+---
+
+## The Proposed Solution
+
+MindAnchor is an AI-powered, real-time voice wellness companion designed to facilitate natural, empathetic, and judgment-free conversations through spoken interaction. By combining modern speech recognition, large language models, neural speech synthesis, and real-time communication infrastructure, the system enables users to engage in fluid voice conversations without the friction of traditional text-based interfaces.
+
+It is important to recognize that MindAnchor is **not** intended to replace human relationships, licensed mental health professionals, or genuine emotional connections. Human empathy, companionship, and professional care remain irreplaceable.
+
+Instead, MindAnchor is designed as a complementary support system—one that can provide a calm conversational space, encourage reflection, guide mindfulness exercises, facilitate emotional check-ins, and offer supportive dialogue during moments when immediate human interaction may not be accessible. Its purpose is not to replace people, but to help bridge moments of isolation with responsible, accessible AI-assisted conversation.
+
+The project also serves as a demonstration of modern production-grade conversational AI engineering, showcasing how multiple real-time AI services can be orchestrated into a seamless end-to-end voice interaction pipeline.
+
+---
+
+## System Architecture
 
 <p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![LiveKit](https://img.shields.io/badge/LiveKit-RealTime-orange)
-![Gemini](https://img.shields.io/badge/Gemini-LLM-red)
-![Deepgram](https://img.shields.io/badge/Deepgram-STT-teal)
-![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS-purple)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
+    <img src="assets/architecture.png" alt="MindAnchor System Architecture" width="100%">
 </p>
 
----
-
-# Overview
-
-MindAnchor is a production-style AI voice companion that enables natural, low-latency spoken conversations for emotional wellness and guided mindfulness.
-
-Unlike traditional chatbots, MindAnchor supports real-time bidirectional voice interaction by orchestrating Speech-to-Text, Large Language Models, and Text-to-Speech over LiveKit's real-time communication infrastructure.
-
-The project demonstrates the architecture of modern conversational AI systems while emphasizing modularity, streaming communication, and production-ready engineering practices.
 
 ---
 
-# ⭐ STAR Method
+## Demo
 
-## Situation
+<p align="center">
+  <video src="assets/demo.mp4" controls width="900">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
-Mental wellness applications often rely on text-based conversations that interrupt natural communication and reduce user engagement.
-
-A voice-first AI companion requires simultaneously solving several engineering challenges:
-
-- Real-time audio streaming
-- Low-latency speech recognition
-- Context-aware LLM reasoning
-- Natural speech synthesis
-- Secure authentication
-- Event-driven communication
+*If your browser or GitHub preview does not support embedded video playback, the demonstration can be accessed directly from `assets/demo.mp4`.*
 
 ---
 
-## Task
+## Tech Stack
 
-Design and implement an end-to-end production-grade AI voice assistant capable of
-
-- Real-time voice conversations
-- Emotional wellness guidance
-- Guided breathing exercises
-- Reflective journaling prompts
-- Grounding techniques
-- Mood check-ins
-- Crisis-aware conversations
-
-while maintaining modularity, scalability, and clean software architecture.
-
----
-
-## Action
-
-Built a complete real-time conversational pipeline integrating multiple AI services.
+### Programming Languages
+- Python
+- JavaScript
+- HTML5
+- CSS3
 
 ### Frontend
-
 - Vanilla JavaScript
-- Responsive modern UI
-- Animated conversational orb
-- Live connection status
-- Microphone controls
-- LiveKit Browser SDK
+- HTML5
+- CSS3
 
 ### Backend
-
-- Python
 - FastAPI
-- LiveKit Agents SDK
-- Secure JWT Token Server
+
+### Real-Time Communication
+- LiveKit Agents
+- WebRTC
+
+### Speech-to-Text
+- Deepgram Nova
+
+### Large Language Model
+- Google Gemini
+
+### Text-to-Speech
+- ElevenLabs
+
+### Authentication
+- JSON Web Tokens (JWT)
+
+### Configuration
+- python-dotenv
+
+### Development Tools
+- Git
+- GitHub
+- Visual Studio Code
 
 ### AI Pipeline
 
-Speech
-
 ```
-User
-    ↓
-Deepgram STT
-```
-
-Reasoning
-
-```
-Gemini LLM
-```
-
-Voice
-
-```
-ElevenLabs TTS
-```
-
-Communication
-
-```
+User Speech
+      │
+      ▼
+Browser (Microphone)
+      │
+      ▼
 LiveKit Cloud
+      │
+      ▼
+Deepgram Speech-to-Text
+      │
+      ▼
+Google Gemini
+      │
+      ▼
+ElevenLabs Text-to-Speech
+      │
+      ▼
+LiveKit Cloud
+      │
+      ▼
+Browser (Speaker)
 ```
 
 ---
+# 🚀 Getting Started
 
-## Result
+## Prerequisites
 
-Successfully developed a fully functional AI voice companion capable of
+Ensure the following are installed on your system:
 
-✔ Real-time conversations
+- Python 3.11+
+- Conda (recommended)
+- Git
 
-✔ Streaming audio
+You will also require API credentials for:
 
-✔ Speech recognition
-
-✔ Intelligent response generation
-
-✔ Natural speech synthesis
-
-✔ Browser-based voice interaction
-
-✔ Modular production architecture
-
-The project serves as a foundation for scalable healthcare, wellness, and conversational AI applications.
+- LiveKit Cloud
+- Google Gemini
+- Deepgram
+- ElevenLabs
 
 ---
 
-# Features
-
-- 🎙️ Real-Time Voice Conversation
-- 🧠 Gemini LLM Reasoning
-- 🗣️ Deepgram Speech Recognition
-- 🔊 ElevenLabs Speech Synthesis
-- ⚡ LiveKit WebRTC Streaming
-- 🔒 JWT Authentication
-- 🌿 Guided Breathing
-- 📖 Reflective Journaling
-- 😊 Mood Check-ins
-- 🚨 Crisis Detection Prompting
-- 🌐 Browser-based UI
-- 📦 Modular Codebase
-
----
-
-# System Architecture
-
-<p align="center">
-
-<img src="assets/architecture.png" width="100%">
-
-</p>
-
----
-
-# Voice Processing Pipeline
-
-```
-┌───────────────┐
-│ User Speech   │
-└──────┬────────┘
-       │
-       ▼
-Deepgram STT
-       │
-       ▼
-Gemini LLM
-       │
-       ▼
-ElevenLabs TTS
-       │
-       ▼
-LiveKit Streaming
-       │
-       ▼
-Browser Playback
-```
-
----
-
-# Project Structure
-
-```
-MindAnchor
-│
-├── frontend
-│   ├── css
-│   ├── js
-│   └── index.html
-│
-├── backend
-│
-├── app.py
-├── assistant.py
-├── llm.py
-├── config.py
-├── token_server.py
-├── requirements.txt
-├── README.md
-└── assets
-    ├── architecture.png
-    ├── ui.png
-    └── demo.gif
-```
-
----
-
-# Tech Stack
-
-| Category | Technology |
-|-----------|------------|
-| Frontend | HTML, CSS, JavaScript |
-| Backend | Python, FastAPI |
-| Real-Time Communication | LiveKit |
-| Speech-to-Text | Deepgram |
-| LLM | Google Gemini |
-| Text-to-Speech | ElevenLabs |
-| Authentication | JWT |
-| Streaming | WebRTC |
-| Voice Activity Detection | Silero |
-| Environment | dotenv |
-
----
-
-# Installation
-
-Clone the repository
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<username>/MindAnchor.git
+git clone https://github.com/<your-username>/MindAnchor.git
 
 cd MindAnchor
 ```
 
-Create virtual environment
+---
+
+## 2. Create a Virtual Environment
 
 ```bash
 conda create -n voice python=3.11
@@ -244,7 +148,9 @@ conda create -n voice python=3.11
 conda activate voice
 ```
 
-Install dependencies
+---
+
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -252,11 +158,11 @@ pip install -r requirements.txt
 
 ---
 
-# Environment Variables
+## 4. Configure Environment Variables
 
-Create a `.env`
+Create a `.env` file in the project root.
 
-```
+```env
 LIVEKIT_URL=
 
 LIVEKIT_API_KEY=
@@ -272,100 +178,37 @@ GEMINI_API_KEY=
 
 ---
 
-# Running the Project
-
-Terminal 1
+## 5. Start the AI Worker
 
 ```bash
 python app.py dev
 ```
 
-Terminal 2
+---
+
+## 6. Start the Token Server
+
+Open a new terminal and execute:
 
 ```bash
 uvicorn token_server:app --reload
 ```
 
-Terminal 3
-
-Launch
-
-```
-frontend/index.html
-```
-
 ---
 
-# Conversation Flow
+## 7. Launch the Frontend
 
-```
-Browser
-      │
-      ▼
-JWT Token
-      │
-      ▼
-LiveKit Room
-      │
-      ▼
-Deepgram
-      │
-      ▼
-Gemini
-      │
-      ▼
-ElevenLabs
-      │
-      ▼
-LiveKit
-      │
-      ▼
-Browser Speaker
-```
+Open `frontend/index.html` using Live Server or your preferred local web server.
+
+Once the interface loads:
+
+1. Click the microphone button.
+2. Grant microphone permission.
+3. Begin speaking naturally with the AI assistant.
 
 ---
+# 📄 License
 
-# Security
+This project is licensed under the **MIT License**.
 
-- JWT-based authentication
-- Ephemeral access tokens
-- Environment variable secrets
-- Secure WebRTC communication
-- No API keys exposed to client
-
----
-
-# Future Enhancements
-
-- Long-term conversational memory
-- Retrieval-Augmented Generation (RAG)
-- User authentication
-- Personalized wellness plans
-- Emotion detection
-- Session analytics
-- Cloud deployment using Docker + Kubernetes
-- CI/CD with GitHub Actions
-
----
-
-# Known Limitations
-
-- Response latency depends on available hardware resources and selected LLM.
-- Local execution on low-memory systems (e.g., 4 GB RAM) may experience slower inference.
-- Performance improves significantly with cloud deployment or higher-end hardware.
-
----
-
-# Acknowledgements
-
-- LiveKit
-- Deepgram
-- ElevenLabs
-- Google Gemini
-- FastAPI
-
----
-
-# License
-
-This project is released under the MIT License.
+Feel free to use, modify, and extend the project for educational or research purposes.
